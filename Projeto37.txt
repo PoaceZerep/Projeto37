@@ -1,0 +1,26 @@
+class Banco {
+    constructor(conta, saldo, tipoConta, agencia) {
+      this.conta = conta;
+      this.saldo = saldo;
+      this.tipoConta = tipoConta;
+      this.agencia = agencia;
+       
+    }
+    Deposito(valorDepositado) {
+        this.saldo += valorDepositado;
+    }
+    
+    Saque(valorSacado) {
+        this.saldo -= valorSacado;
+    }
+
+ }
+
+  const contaCliente1 = new Banco(666, 200000000.00, "Investimento", 22);
+  
+  console.log(contaCliente1.saldo);
+  contaCliente1.Deposito(500000);
+  console.log(contaCliente1.saldo);
+  contaCliente1.Saque(589990);
+  console.log(contaCliente1.saldo);
+  console.log(contaCliente1.conta);
